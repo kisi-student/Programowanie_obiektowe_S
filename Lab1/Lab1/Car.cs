@@ -76,7 +76,7 @@ namespace Lab1
             return $"Car | Brand: {_brand}, Model: {_model}, NumOfDoors: {_doorCount}, EngineVol: {_engineVolume}, AvgConsump: {_avgConsump}, RegistrationNumber: {_registrationNumber}";
         }
 
-        public double CalculateConsump(double roadLength)
+        private double CalculateConsump(double roadLength)
         {
             return (_avgConsump * roadLength) / 100.0;
         }
