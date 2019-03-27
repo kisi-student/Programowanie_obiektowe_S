@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Lab5.BLL.Department">
+    <Position X="10.25" Y="0.5" Width="7.75" />
+    <TypeIdentifier>
+      <HashCode>CAIAAEEAAAQAFAAEAAAAAAQAAAAAAAgAAAAiAAAAAAA=</HashCode>
+      <FileName>Department.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.FinalGrade" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEAIAAAAAAAAAAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>FinalGrade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.Lecturer">
+    <Position X="3.75" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAkAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lecturer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.OrganizationUnit" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="5.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAFAAEAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>OrganizationUnit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.Person">
+    <Position X="3.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAEAAEAAAAAAAAAAAQAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.Student">
+    <Position X="6.75" Y="2.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>ADIAAEAAAAAAFAAEIAAAAAABAAAAAAAAAAAAAgEAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.Subject" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAAAAAEAAEIAIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Subject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.PrintActionExtension">
+    <Position X="17.5" Y="11" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab5.BLL.ActionExtension">
+    <Position X="17.5" Y="9" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAAAAAAAABAAAAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab5.BLL.SearchActionExtension">
+    <Position X="17.5" Y="12.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lab5.BLL.IInfo">
+    <Position X="6.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab5.BLL.IAction">
+    <Position X="15.5" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Action.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab5.BLL.IObject">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="Lab5.BLL.IInfo" FixedToPoint="true">
+      <Path>
+        <Point X="7.375" Y="0.5" />
+        <Point X="7.375" Y="0.377" />
+        <Point X="10.123" Y="0.377" />
+        <Point X="10.123" Y="0.75" />
+        <Point X="10" Y="0.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IObject.cs</FileName>
+      <NewMemberFileName>IInfo.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab5.BLL.ISearchAction">
+    <Position X="15.75" Y="12.75" Width="1.5" />
+    <InheritanceLine Type="Lab5.BLL.IAction" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.375" Y="10.103" />
+        <Point X="16.375" Y="12.626" />
+        <Point X="16.375" Y="12.626" />
+        <Point X="16.375" Y="12.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Action.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
