@@ -38,7 +38,13 @@ namespace Lab4
             if (n.prev != null)
                 n.prev.next = n;
         }
+        
+        public bool RemoveAt(int i)
+        { return false; }
+        public bool Remove(T element)
+        { return false; }
 
+        public int Count { get { return 0; } }
 
         private Node Get(int i)
         {
@@ -102,7 +108,7 @@ namespace Lab4
     public partial class MyList2<T> : IEnumerable<T>
     {
 
-        class MyRevEnumerator: MyEnumerator{
+        /*class MyRevEnumerator: MyEnumerator{
             public MyRevEnumerator(Node last)
                 :base(null){
                 current.prev = last;
@@ -113,7 +119,7 @@ namespace Lab4
                     current = current.prev;
                 return current != null;
             }
-        }
+        }*/
 
         public IEnumerator<T> GetRevEnumerator()
         {

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="kolokwium.Client">
+    <Position X="0.75" Y="0.5" Width="4" />
+    <Members>
+      <Field Name="_lastid" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BAACAEAAACAAAAQMAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="kolokwium.Service">
+    <Position X="5" Y="0.5" Width="3" />
+    <Members>
+      <Property Name="Name" Hidden="true" />
+      <Property Name="Price" Hidden="true" />
+      <Property Name="Quantit" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAQAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="kolokwium.SiteHosting">
+    <Position X="4.5" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAQAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Hosting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="kolokwium.Admin">
+    <Position X="0.75" Y="3.5" Width="3.5" />
+    <Members>
+      <Property Name="LimitLeft" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAgACAAAAAAAAAAAAAAAIAAACAEAAA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="kolokwium.SQLServer">
+    <Position X="5" Y="2.25" Width="2.25" />
+    <Members>
+      <Method Name="SQLServer" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAIAAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>SQLServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="kolokwium.WebServer">
+    <Position X="7.5" Y="2.25" Width="2.25" />
+    <Members>
+      <Method Name="ToString" Hidden="true" />
+      <Method Name="WebServer" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAIAAAAAAAABAAAAAA=</HashCode>
+      <FileName>WebServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="kolokwium.IBillItem">
+    <Position X="7.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBillItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="kolokwium.IBill">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>IBill.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

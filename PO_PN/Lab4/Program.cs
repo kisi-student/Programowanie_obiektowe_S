@@ -29,6 +29,16 @@ namespace Lab4
                 last = last.next = new Node() { value = element };
         }
 
+        public void Insert(int i, T element)
+        { }
+        public bool RemoveAt(int i)
+        { return false; }
+        public bool Remove(T element)
+        { return false; }
+
+        public int Count { get { return 0; } }
+
+
         private Node Get(int i)
         {
             var e = first;
