@@ -24,6 +24,7 @@ namespace Lab1
             Car s2 = new Car("Syrena", "105", 2, 800, 7.6);
 
             s2.WriteInformation();
+            ss
 
             double kosztPrzejazdu = s2.CalculateCostRide(30.5, 4.85);
             Console.WriteLine("Koszt przejazdu:" + kosztPrzejazdu);

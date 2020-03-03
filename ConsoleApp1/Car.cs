@@ -43,7 +43,7 @@ namespace Lab1
         {
             return CalculateFuelConsumption(_routeLength) * _fuelCost; 
         }
-
+        sdasdds
         public void WriteInformation()
         {
             Console.WriteLine("Mark:" + _mark + "Model:" + _model + "Door Count:" + _doorCount + "Engine Capacity:" + _engineCapacity + "Avg Fuel Consumption:" + _avgFuelConsumption);
