@@ -32,7 +32,6 @@ namespace Lab01
 
             Car.DisplayCarCount();
 
-            Console.ReadKey();
         }
     }
 }
