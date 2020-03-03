@@ -8,29 +8,32 @@ namespace Lab1
 {
     public class Car
     {
-        private string _mark;
+        private string _brand;
         private string _model;
         private int _doorCount;
         private int _engineCapacity;
         private double _avgFuelConsumption;
+        private string _registrationNumber;
         private static int _carsCount = 0;
 
         public Car()
         {
-            _mark = "unknown";
+            _brand = "unknown";
             _model = "unknown";
             _doorCount = 0;
             _avgFuelConsumption = 0.0;
+            _registrationNumber = "uknown";
             _carsCount++;
         }
 
-        public Car(string _mark, string _model, int _doorCount, int _engineCapacity, double _avgFuelConsumption)
+        public Car(string _mark, string _model, string _registrationNumber, int _doorCount, int _engineCapacity, double _avgFuelConsumption)
         {
-            this._mark = _mark;
+            this._brand = _mark;
             this._model = _model;
             this._doorCount = _doorCount;
             this._engineCapacity = _engineCapacity;
             this._avgFuelConsumption = _avgFuelConsumption;
+            this._registrationNumber = _registrationNumber;
             _carsCount++;
         }
 
@@ -43,25 +46,23 @@ namespace Lab1
         {
             return CalculateFuelConsumption(_routeLength) * _fuelCost; 
         }
-        sdasdds
         public void WriteInformation()
         {
-            Console.WriteLine("Mark:" + _mark + "Model:" + _model + "Door Count:" + _doorCount + "Engine Capacity:" + _engineCapacity + "Avg Fuel Consumption:" + _avgFuelConsumption);
-            Console.WriteLine("/n");
+            Console.WriteLine("Mark:" + _brand + " Model:" + _model + " Registration Number:" + _registrationNumber + " Door Count:" + _doorCount + " Engine Capacity:" + _engineCapacity + " Avg Fuel Consumption:" + _avgFuelConsumption);
         }
 
         public static void WriteCarsCount()
         {
-            Console.WriteLine("Cars Count:" + _carsCount);
-            Console.WriteLine("/n");
+            Console.WriteLine("Cars Count:" + _carsCount + "\n");
         }
 
 
 
-        public string Mark { get => _mark; set => _mark = value; }
+        public string Brand { get => _brand; set => _brand = value; }
         public string Model { get => _model; set => _model = value; }
         public int DoorCount { get => _doorCount; set => _doorCount = value; }
         public int EngineCapacity { get => _engineCapacity; set => _engineCapacity = value; }
         public double AvgFuelConsumption { get => _avgFuelConsumption; set => _avgFuelConsumption = value; }
+        public string RegistrationNumber { get => _registrationNumber; set => _registrationNumber = value; }
     }
 }
