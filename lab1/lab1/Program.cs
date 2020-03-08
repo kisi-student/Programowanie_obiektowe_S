@@ -6,66 +6,39 @@ using System.Threading.Tasks;
 
 namespace lab1
 {
-    public class Car
-    {
-        private string _brand;
-        private string _model;
-        private int _numDoors;
-        private int _engineCap;
-        private double _avgConsump;
-        private static int _carCount = 0;
-
-        public string Brand
-        {
-            get { return _brand; }
-            set { _brand = value; }
-        }
-        public string Model
-        {
-            get { return _model; }
-            set { _model = value; }
-        }
-        public int NumDoors
-        {
-            get { return _numDoors; }
-            set { _numDoors = value; }
-        }
-        public int EngineCap
-        {
-            get { return _engineCap; }
-            set { _engineCap = value; }
-        }
-        public double AvgConsump
-        {
-            get { return _avgConsump; }
-            set { _avgConsump = value; }
-        }
-
-        public Car()
-        {
-            _brand = "unknown";
-            _model = "unknown";
-            _numDoors = 0;
-            _engineCap = 0;
-            _avgConsump = 0.0;
-            _carCount++;
-        }
-
-        public Car(string brand, string model, int numDoors, int engineCap, double avgConsump)
-        {
-            _brand = brand;
-            _model = model;
-            _numDoors = numDoors;
-            _engineCap = engineCap;
-            _avgConsump = avgConsump;
-            _carCount++;
-        }
-    }
-
+   
     class Program
     {
         static void Main(string[] args)
         {
+            /*
+            //ZADANIE 1
+            Car s1 = new Car();
+
+            s1.CarInfo();
+
+            s1.Brand = "Fiat";
+            s1.Model = "126p";
+            s1.NumDoors = 2;
+            s1.EngineCap = 650;
+            s1.AvgConsump = 6.0;
+
+            s1.CarInfo();
+
+            Car s2 = new Car("Syrena", "105", 2, 800, 7.6);
+
+            s2.CarInfo();
+
+            double kosztPrzejazdu = s2.CalcFuelCost(30.5, 4.85);
+            Console.WriteLine("Koszt przejazdu: " + kosztPrzejazdu + "zl");
+
+            Car.CarCount();
+
+            Console.ReadKey();
+            */
+
+            //ZADANIE 2
+
         }
     }
 }
