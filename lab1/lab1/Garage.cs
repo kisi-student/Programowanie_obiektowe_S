@@ -45,11 +45,7 @@ namespace lab1
         {
             if (_carCount < _capacity)
             {
-                _collection[_carCount].Brand = c.Brand;
-                _collection[_carCount].Model = c.Model;
-                _collection[_carCount].AvgConsump = c.AvgConsump;
-                _collection[_carCount].EngineCap = c.EngineCap;
-                _collection[_carCount].NumDoors = c.NumDoors;
+                _collection[_carCount] = c;
                 _carCount++;
                 Console.WriteLine("Pomyslnie dodano samochod");
             }
@@ -81,7 +77,14 @@ namespace lab1
         }
         public void GarageInfo()
         {
-
+            Console.WriteLine("Informacje o garazu:");
+            Console.WriteLine("Pojemnosc garazu: {0} pojazd(-ow)", _capacity);
+            Console.WriteLine("Ilosc samochodow w garazu: {0}", _carCount);
+            for(int i=0; i<_carCount; i++)
+            {
+                Console.WriteLine("Samochod nr {0}", i);
+                _collection[i].CarInfo();
+            }
         }
     }
 }
