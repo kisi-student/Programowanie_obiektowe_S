@@ -32,7 +32,6 @@ namespace Task1
 
             Car.PrintNumberOfCars();
 
-
             Console.ReadKey();
         }
     }

@@ -35,7 +35,6 @@ namespace Task2
             g2.EnterCar();
             g2.EnterCar();
 
-
             Console.ReadKey();
         }
     }

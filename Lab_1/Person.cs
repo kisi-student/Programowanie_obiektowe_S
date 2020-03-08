@@ -56,8 +56,7 @@ namespace Lab_1
             {
 				Console.WriteLine("There is no cars in garage.");
             }
-        }
-		
+        }		
         public void PrintInfo()
         {
 			Console.WriteLine(this);

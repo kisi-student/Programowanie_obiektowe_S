@@ -14,8 +14,7 @@ namespace Lab_1
         {
             Task_1.Run();
             Task_2.Run();
-            Homework.Run();
-       
+            Homework.Run();     
         }
     }
 }

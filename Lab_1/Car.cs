@@ -100,6 +100,7 @@ namespace Cars
             Console.WriteLine("Ilosc dzrwi: " + doorCount);
             Console.WriteLine("Pojemnosc silnika: " + engineVolume);
             Console.WriteLine("Srednie spalanie: " + avarageConsump);
+       
         }
         public static void PrintNumberOfCars()
         {
