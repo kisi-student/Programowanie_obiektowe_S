@@ -33,6 +33,7 @@ namespace Lab_1
             person.PopCar(car3.RegistrationNumber);
             person.PrintInfo();
 
+
             Console.ReadKey();
         }
     }

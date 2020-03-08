@@ -101,7 +101,6 @@ namespace Cars
             Console.WriteLine("Pojemnosc silnika: " + engineVolume);
             Console.WriteLine("Srednie spalanie: " + avarageConsump);
         }
-
         public static void PrintNumberOfCars()
         {
             Console.WriteLine("Liczba samochodow: " + numberOfCars);

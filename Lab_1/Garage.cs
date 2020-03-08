@@ -79,7 +79,6 @@ namespace Garage_
 			else
 				Console.WriteLine("Garaz jest pusty !");
 		}
-
 		public void PrintInfo()
 		{
 			Console.WriteLine("Adres garazu: " + adres);

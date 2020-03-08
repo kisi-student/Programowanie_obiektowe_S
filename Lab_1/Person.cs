@@ -45,7 +45,6 @@ namespace Lab_1
                 Console.WriteLine("Maximum number of owned cars is 3.");
             }
 		}
-
         public void PopCar(string registrationNr)
         {
 			if(_carCount > 0)
