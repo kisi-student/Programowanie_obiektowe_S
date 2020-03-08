@@ -67,7 +67,6 @@ namespace Lab1
             else
             {
                 Console.WriteLine("\nCar with this registration number will be deleted:" + _registrationNumber);
-                Console.WriteLine("\n");
 
                 int _tmpSize = _numberOfCars;
                 string[] _temp;
