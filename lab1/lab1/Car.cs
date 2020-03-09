@@ -14,6 +14,7 @@ namespace lab1
         private int _numDoors;
         private int _engineCap;
         private double _avgConsump;
+        private string _registrationNumber;
         private static int _carCount = 0;
         //wlasciwosci
         public string Brand
@@ -41,6 +42,11 @@ namespace lab1
             get { return _avgConsump; }
             set { _avgConsump = value; }
         }
+        public string RegistrationNumber
+        {
+            get { return _registrationNumber; }
+            set { _registrationNumber = value; }
+        }
         //konstruktory
         public Car()
         {
@@ -49,15 +55,17 @@ namespace lab1
             _numDoors = 0;
             _engineCap = 0;
             _avgConsump = 0.0;
+            _registrationNumber = "unknown";
             _carCount++;
         }
-        public Car(string brand, string model, int numDoors, int engineCap, double avgConsump)
+        public Car(string brand, string model, int numDoors, int engineCap, double avgConsump, string registrationNumber)
         {
             _brand = brand;
             _model = model;
             _numDoors = numDoors;
             _engineCap = engineCap;
             _avgConsump = avgConsump;
+            _registrationNumber = registrationNumber;
             _carCount++;
         }
         //metody
@@ -76,6 +84,8 @@ namespace lab1
             Console.WriteLine("Pojemnosc silnika: {0}cc", _engineCap);
             Console.WriteLine("Srednie spalanie: {0}l / 100km", _avgConsump);
             Console.WriteLine("Liczba drzwi: {0}", _numDoors);
+            Console.WriteLine("Numer rejestracyjny: {0}", _registrationNumber);
+
         }
         public static void CarCount()
         {
