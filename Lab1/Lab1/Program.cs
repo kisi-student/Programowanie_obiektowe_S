@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Tasks;
 
-using zad1;
-
-namespace Lab1
+namespace zadanie1po
 {
-    public class Program //defaultowo jest tu internal
+    class Program
     {
-        static void Main(string[] args) //static --> Klasa.statcznyElement
+        static void Main(string[] args)
         {
+            Task_1.DoWork();
+            Task_2.DoWork();
+            Homework.DoWork();
         }
     }
 }

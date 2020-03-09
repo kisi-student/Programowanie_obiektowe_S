@@ -1,43 +1,78 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace zad1
+namespace zadanie1samochod
 {
-    class Car
+    public class Car
     {
         public string Brand { get; set; }
         public string Model { get; set; }
-        public int CapacityEngine { get; set; }
-        public double AverageCombustion { get; set; }
+        public int DoorCount { get; set; }
+        public int EngineCapacity { get; set; }
+        public double Combustion { get; set; }
 
-        static int carCount=0;
+        public string RegistrationNumber { get; set; }
+
+        public static int iloscSamochodow = 0; //zwykly int
+
+        //private double srednieSpalanie; stary sposob, ale korzystany na pcz
+
+        //public double Spalanie //wlasciwosc do pola srednieSpalanie
+        //{
+        //    get { return srednieSpalanie; }
+        //    set { srednieSpalanie = value; }
+        //}
 
         public Car()
         {
-            Brand = "none";
-            Model = "none";
-            CapacityEngine = 0;
-            AverageCombustion = 0.0;
-
-            carCount++; //przy kazdym wywolaniu konstruktora zwiekszamy licznik samochodow
-
-        }
-        public Car(string brand, string model, int capacityEngine, double averageCombustion)
-        {
-            Brand = brand;
-            Model = model;
-            CapacityEngine = capacityEngine;
-            AverageCombustion = averageCombustion;
-
-            carCount++;
+            Brand = "nieznana";
+            Model = "nieznany";
+            DoorCount = 0;
+            EngineCapacity = 0;
+            Combustion = 0.0;
+            iloscSamochodow++;
         }
 
-       private double CalculateCombustion(double lengthRoute)
+        public Car(string brand_, string model_, int doorCount_, int engineCapacity_, double avgCombustion_)
         {
+            Brand = brand_;
+            Model = model_;
+            DoorCount = doorCount_;
+            EngineCapacity = engineCapacity_;
+            Combustion = avgCombustion_;
+            iloscSamochodow++;
+        }
 
+        private double ObliczSpalanie(double dlugoscTrasy)
+        {
+            //double spalanie;
+            //spalanie = (Spalanie * dlugoscTrasy) / 100.0;
+            // return spalanie;
+            return (Combustion * dlugoscTrasy) / 100.0f;
+        }
+
+        public double ObliczKosztPrzejazdu(double dlugoscTrasy, double cenaPaliwa)
+        {
+            return ObliczSpalanie(dlugoscTrasy) * cenaPaliwa;
+        }
+
+        //public double ObliczKosztPrzejazdu2(double dlugoscTrasy, double cenaPaliwa) => dlugoscTrasy * cenaPaliwa; 
+
+        public void WypiszInfo()
+        {
+            //Console.WriteLine("Marka: {0} {1}", Marka, Model);
+            // Console.WriteLine($"Marka: {Marka}"); nowsza metoda
+
+            Console.WriteLine("Marka: " + Brand);
+            Console.WriteLine("Model: " + Model);
+            Console.WriteLine("Ilosc drzwi: " + DoorCount);
+            Console.WriteLine("Pojemnosc silnika: " + EngineCapacity);
+            Console.WriteLine("Spalanie: " + Combustion);
+            Console.WriteLine();
+        }
+
+        public static void WypiszIloscSamochodow()
+        {
+            Console.WriteLine(iloscSamochodow);
         }
     }
 }
