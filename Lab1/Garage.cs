@@ -8,21 +8,21 @@ namespace Lab1
 {
     class Garage
     {
-        private string adres;
+        private string address;
         private int capacity;
         private int carsNumber = 0;
         private Car[] cars;
 
         public Garage()
         {
-            adres = "unknown";
+            address = "unknown";
             capacity = 0;
             cars = null;
         }
 
-        public Garage(string adres, int capacity)
+        public Garage(string address, int capacity)
         {
-            this.adres = adres;
+            this.address = address;
             Capacity = capacity;
         }
 
@@ -49,7 +49,7 @@ namespace Lab1
             return res;
         }
 
-        public string Adres { get => adres; set => adres = value; }
+        public string Address { get => address; set => address = value; }
         public int Capacity { 
             get => capacity;
             set { 
@@ -60,7 +60,7 @@ namespace Lab1
 
         public override string ToString()
         {
-            string res = $"Garaz( adres:{adres}, pojemnosc:{capacity}, ilosc garaz. sam.:{carsNumber},\r\n Samochody:\r\n";
+            string res = $"Garaz( adres:{address}, pojemnosc:{capacity}, ilosc garaz. sam.:{carsNumber},\r\n Samochody:\r\n";
             foreach (Car x in cars)
                 res += " "+x+"\r\n";
             res += ")";

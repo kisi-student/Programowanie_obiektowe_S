@@ -19,10 +19,11 @@ namespace Lab1
             c1.DoorNumber = 2;
             c1.EngineCapacity = 650;
             c1.AvgPetrolUse = 6.0;
+            c1.LicensePlateNumber = "PCZ WIMII";
 
             c1.printInfo();
 
-            Car c2 = new Car("Syrena", "105", 2, 800, 7.6);
+            Car c2 = new Car("Syrena", "105", 2, 800, 7.6, "SKL 00000");
 
             c2.printInfo();
 
@@ -32,7 +33,7 @@ namespace Lab1
             Car.printNumberOfCarInstances();
 
             Garage g1 = new Garage();
-            g1.Adres = "ul. Garażowa 1";
+            g1.Address = "ul. Garażowa 1";
             g1.Capacity = 1;
 
             Garage g2 = new Garage("ul. Garażowa 2", 2);
@@ -50,6 +51,12 @@ namespace Lab1
 
             g2.LeadCarOut();
             g2.LeadCarOut();
+
+            Person p1 = new Person("Jan", "Kowalski", "Kowalowa 1");
+            p1.PrintInfo();
+            p1.AddCar(c1.LicensePlateNumber);
+            p1.PrintInfo();
+            p1.RemoveCar(c1.LicensePlateNumber);
 
             Console.ReadKey();
         }

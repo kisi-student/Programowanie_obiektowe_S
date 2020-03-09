@@ -14,6 +14,7 @@ namespace Lab1
         private double engineCapacity;
         private double avgPetrolUse;//per 100km
         public static int carNumber = 0;
+        private string licensePlateNumber;
 
         public Car()
         {
@@ -25,7 +26,7 @@ namespace Lab1
             avgPetrolUse = 0.0;
         }
 
-        public Car(string brand, string model, int doorNumber, double engineCapacity, double avgPetrolUse)
+        public Car(string brand, string model, int doorNumber, double engineCapacity, double avgPetrolUse, string licensePlateNumber)
         {
             carNumber++;
             this.brand = brand;
@@ -33,6 +34,7 @@ namespace Lab1
             this.doorNumber = doorNumber;
             this.engineCapacity = engineCapacity;
             this.avgPetrolUse = avgPetrolUse;
+            this.licensePlateNumber = licensePlateNumber;
         }
 
         /// <summary>
@@ -61,10 +63,11 @@ namespace Lab1
         public int DoorNumber { get => doorNumber; set => doorNumber = value; }
         public double EngineCapacity { get => engineCapacity; set => engineCapacity = value; }
         public double AvgPetrolUse { get => avgPetrolUse; set => avgPetrolUse = value; }
+        public string LicensePlateNumber { get => licensePlateNumber; set => licensePlateNumber = value; }
 
         public override string ToString()
         {
-            return $"Auto( marka:{brand}, model:{model}, l.drzwi:{doorNumber}, poj. silnika:{engineCapacity}, sr. uz. paliwa:{avgPetrolUse})";
+            return $"Auto( marka:{brand}, model:{model}, l.drzwi:{doorNumber}, poj. silnika:{engineCapacity}, sr. uz. paliwa:{avgPetrolUse}, nr rej.:{licensePlateNumber})";
         }
 
         public void printInfo()
