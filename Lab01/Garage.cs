@@ -15,6 +15,7 @@ namespace Lab01
 
         public int CarsInGarage { get => carsInGarage; set => carsInGarage = value; }
         public string Address { get => address; set => address = value; }
+        //public Car this[int i] { get => cars[i]; }
         public int Capacity {
             get { return capacity; }
             set { capacity = value; cars = new Car[capacity]; }
