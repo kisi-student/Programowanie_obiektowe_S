@@ -32,8 +32,8 @@ namespace lab_1
             Car.List_the_number_of_cars();
             Console.ReadKey(); */
             // ZADANIE 2
-            Car s1 = new Car("Fiat", "126p", 2, 650, 6.0);
-            Car s2 = new Car("Syrena", "105", 2, 800, 7.6);
+            Car s1 = new Car("Fiat", "126p", 2, 650, 6.0, "SC12345");
+            Car s2 = new Car("Syrena", "105", 2, 800, 7.6, "SC09876");
 
             Garage g1 = new Garage();
             g1.Address = "ul. Garażowa 1";
