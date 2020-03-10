@@ -45,7 +45,7 @@ namespace Lab01
 
         private double calculateGasConsumption(double len) { return (len * averageGasConsumption) / 100.0; }
       
-        public double calculateJourneyCost(double len, double gasPrice) { return calculateGasConsumption(len) * gasPrice; }
+        public double calculateTripCost(double len, double gasPrice) { return calculateGasConsumption(len) * gasPrice; }
 
         public override string ToString()
         {
