@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Car
+namespace Cars
 {
     public class Car
     {
@@ -53,26 +53,29 @@ namespace Car
             set { registrationNumber = value; }
         }
 
-        Car()
+        public Car()
         {
             brand = "none";
             model = "none";
             doorCount = 0;
+            registrationNumber = "none";
             engineVolume = 0;
             avarageConsump = 0.0f;
+            numberOfCars++;
         }
 
-        Car(string _brand,string _model,int _doorCount,int _engineVolume,double _avarageConsump)
+        public Car(string _brand,string _model,string _registrationNumber,int _doorCount,int _engineVolume,double _avarageConsump)
         {
             brand = _brand;
             model = _model;
             doorCount = _doorCount;
             engineVolume = _engineVolume;
             avarageConsump = _avarageConsump;
+            registrationNumber = _registrationNumber;
             numberOfCars++;
         }
 
-        private double CalculateConsump(double roadLength)
+        private double CountConsump(double roadLength)
         {
             double consump;
             consump = (avarageConsump * roadLength) / 100.0;
@@ -82,12 +85,26 @@ namespace Car
         public double CountCostOfTravel(double roadLength, double petrolPrice)
         {
             double consump;
-            consump = (avarageConsump * roadLength) / 100.0;
+            consump = CountConsump(roadLength);
 
             double costOfTravel;
             costOfTravel = consump * petrolPrice;
 
             return costOfTravel;
+        }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine("Marka: " + brand);
+            Console.WriteLine("Model: " + model);
+            Console.WriteLine("Ilosc dzrwi: " + doorCount);
+            Console.WriteLine("Pojemnosc silnika: " + engineVolume);
+            Console.WriteLine("Srednie spalanie: " + avarageConsump);
+       
+        }
+        public static void PrintNumberOfCars()
+        {
+            Console.WriteLine("Liczba samochodow: " + numberOfCars);
         }
     }
 }

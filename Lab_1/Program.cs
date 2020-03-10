@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task1;
+using Task2;
 
 namespace Lab_1
 {
@@ -10,6 +12,9 @@ namespace Lab_1
     {
         static void Main(string[] args)
         {
+            Task_1.Run();
+            Task_2.Run();
+            Homework.Run();     
         }
     }
 }
