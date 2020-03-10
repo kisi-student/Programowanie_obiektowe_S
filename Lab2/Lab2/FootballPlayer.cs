@@ -8,7 +8,7 @@ namespace Lab2
 {
     public class FootballPlayer : Footballer
     {
-        public FootballPlayer(string name, string surname, string birthday,
+        public FootballPlayer(string name, string surname, DateTime birthday,
              string role, string club)
             : base(name, surname, birthday, role, club) { }
 

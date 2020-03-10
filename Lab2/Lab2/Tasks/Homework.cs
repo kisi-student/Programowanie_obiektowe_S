@@ -10,8 +10,8 @@ namespace Tasks
         {
             Console.WriteLine("PRACA DOMOWA\n");
 
-            var handballPlayer = new HandballPlayer("Mateusz", "Żbik", "10.08.1986", "obrońca", "FC Częstochowa");
-            var footballPlayer = new FootballPlayer("Piotr", "Kos", "14.09.1984", "napastnik", "FC Politechnika");
+            var handballPlayer = new HandballPlayer("Mateusz", "Żbik", new DateTime(1986, 8, 10), "obrońca", "FC Częstochowa");
+            var footballPlayer = new FootballPlayer("Piotr", "Kos", new DateTime(1984, 9, 14), "napastnik", "FC Politechnika");
 
             handballPlayer.PrintInfo();
             footballPlayer.PrintInfo();

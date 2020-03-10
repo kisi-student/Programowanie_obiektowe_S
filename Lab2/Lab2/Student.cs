@@ -14,7 +14,7 @@ namespace Lab2
 
         private List<Mark> _marks = new List<Mark>();
 
-        public Student(string name, string surname, string birthday,
+        public Student(string name, string surname, DateTime birthday,
             int year, int group, int indexNo) : base(name, surname, birthday)
         {
             Year = year;
@@ -22,12 +22,12 @@ namespace Lab2
             IndexNo = indexNo;
         }
 
-        public void PushMark(string lectureName, string date, double value)
+        public void PushMark(string lectureName, DateTime date, double value)
         {
             _marks.Add(new Mark(lectureName, date, value));
         }
 
-        public void PopMark(string lectureName, string date, double value)
+        public void PopMark(string lectureName, DateTime date, double value)
         {
             var mark = new Mark(lectureName, date, value);
             if(_marks.Contains(mark))
@@ -78,7 +78,7 @@ namespace Lab2
 
         public override string ToString()
         {
-            string str = $"{base.ToString()} Year: {Year} Group: {Group} IndexNo: {IndexNo}\n";
+            string str = $"{base.ToString()}Year: {Year} Group: {Group} IndexNo: {IndexNo}\n";
             
             foreach (var mark in _marks)
             {

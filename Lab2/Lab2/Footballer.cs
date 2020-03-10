@@ -8,7 +8,7 @@ namespace Lab2
         public string Club { get; set; }
         public int GoalCount { get; set; }
 
-        public Footballer(string name, string surname, string birthday,
+        public Footballer(string name, string surname, DateTime birthday,
             string role, string club) : base(name, surname, birthday)
         {
             Role = role;

@@ -5,10 +5,10 @@ namespace Lab2
     class Mark
     {
         public string LectureName { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public double Value { get; set; }
 
-        public Mark(string lectureName, string date, double value)
+        public Mark(string lectureName, DateTime date, double value)
         {
             LectureName = lectureName;
             Date = date;
@@ -22,7 +22,7 @@ namespace Lab2
 
         public override string ToString()
         {
-            return $"Lecture: {LectureName} Date: {Date} Mark: {Value}";
+            return $"Lecture: {LectureName} Date: {Date.ToShortDateString()} Mark: {Value}";
         }
     }
 }

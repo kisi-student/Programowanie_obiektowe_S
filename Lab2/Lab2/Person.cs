@@ -6,9 +6,9 @@ namespace Lab2
     {
         protected string Name { get; set; }
         protected string Surname { get; set; }
-        protected string Birthday { get; set; } // change to DateTime
+        protected DateTime Birthday { get; set; } // change to DateTime
 
-        public Person(string name, string surname, string birthday)
+        public Person(string name, string surname, DateTime birthday)
         {
             Name = name;
             Surname = surname;
@@ -22,7 +22,7 @@ namespace Lab2
 
         public override string ToString()
         {
-            return $"Name: {Name} Surname: {Surname} Birthday: {Birthday}\n";
+            return $"Name: {Name} Surname: {Surname} Birthday: {Birthday.ToShortDateString()}\n";
         }
     }
 }
