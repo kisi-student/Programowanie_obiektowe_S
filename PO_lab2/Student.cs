@@ -22,7 +22,8 @@ namespace PO_lab
 
         public override void WriteInfo()
         {
-            
+            Console.WriteLine($"Imie {name}, nazwisko {surname}, data urodzenia {birthDate}");
+            Console.WriteLine($"Rok studiow {year}, grupa {group}, numer indeksu {indexNr}\n");
         }
     }
 }

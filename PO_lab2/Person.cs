@@ -21,7 +21,7 @@ namespace PO_lab
 
         public virtual void WriteInfo()
         {
-
+            Console.WriteLine( $"Imie {name}, nazwisko {surname}, data urodzenia {birthDate}\n" );
         }
     }
 }
