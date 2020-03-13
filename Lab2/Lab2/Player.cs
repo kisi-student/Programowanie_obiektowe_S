@@ -41,6 +41,6 @@ namespace Lab2
             Console.WriteLine("----------");
         }
 
-        public void Goal() { numberOfGoals++; }
+        virtual public void Goal() { numberOfGoals++; }
     }
 }

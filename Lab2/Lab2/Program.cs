@@ -34,6 +34,20 @@ namespace Lab2
             p1.Goal();
             p1.Details();
             Console.ReadKey();
+
+            FootballPlayer f1 = new FootballPlayer("Żabson", "Ziomal", "11.11.11", "biegacz", "Polonia NAPLETON");
+            f1.Details();
+            Console.ReadKey();
+            f1.Goal();
+            f1.Details();
+            Console.ReadKey();
+
+            HandballPlayer h1 = new HandballPlayer("Mati", "Kuc", "01.02.03", "rzucacz", "REMIS Jaworzno");
+            h1.Details();
+            Console.ReadKey();
+            h1.Goal();
+            h1.Details();
+            Console.ReadKey();
         }
     }
 }
