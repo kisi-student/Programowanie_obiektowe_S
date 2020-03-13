@@ -14,6 +14,19 @@ namespace Lab2
             Student s1 = new Student("Paweł", "Filipiak", "1.21.37", 2, 1, 129665);
             s1.Details();
             Console.ReadKey();
+            s1.AddGrade("English", "10-04-2016", 4.5);
+            s1.AddGrade("Polish", "10-04-2016", 4.5);
+            s1.GradesDetails("English");
+            s1.GradesDetails("Polish");
+            Console.ReadKey();
+            s1.DeleteGrade("English", "10-04-2016", 4.5);
+            s1.GradesDetails("English");
+            s1.GradesDetails("Polish");
+            Console.ReadKey();
+            s1.DeleteAllGrades();
+            s1.GradesDetails("English");
+            s1.GradesDetails("Polish");
+            Console.ReadKey();
 
             Player p1 = new Player("Damian", "Bulski", "12.12.12", "kopacz", "RKS HUWDU");
             p1.Details();
