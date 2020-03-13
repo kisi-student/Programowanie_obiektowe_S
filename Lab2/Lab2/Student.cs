@@ -43,6 +43,11 @@ namespace Lab2
         {
             Console.WriteLine(this);
             Console.WriteLine("----------");
+            foreach (Grade g in grades)
+            {
+               Console.WriteLine(g);
+               Console.WriteLine("----------");
+            }
         }
 
         public void GradesDetails(string subjectName_)
@@ -50,7 +55,10 @@ namespace Lab2
             foreach (Grade g in grades)
             {
                 if (g.SubjectName == subjectName_)
+                {
                     Console.WriteLine(g);
+                    Console.WriteLine("----------");
+                }               
             }
         }
 

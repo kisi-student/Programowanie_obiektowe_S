@@ -16,8 +16,7 @@ namespace Lab2
             Console.ReadKey();
             s1.AddGrade("English", "10-04-2016", 4.5);
             s1.AddGrade("Polish", "10-04-2016", 4.5);
-            s1.GradesDetails("English");
-            s1.GradesDetails("Polish");
+            s1.Details();
             Console.ReadKey();
             s1.DeleteGrade("English", "10-04-2016", 4.5);
             s1.GradesDetails("English");
