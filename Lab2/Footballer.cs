@@ -8,37 +8,38 @@ namespace Lab2
 {
     public class Footballer:Person
     {
-        private string _position;
-        private string _team;
-        private int _goals;
-
         public Footballer():base()
         {
-            _position = "unknown";
-            _team = "unknown";
-            _goals = 0;
+            Position = "unknown";
+            Team = "unknown";
+            Goals = 0;
         }
 
-        public Footballer(string _firstName, string _secondName, string _dateOfBirth, string _position, string _team):base(_firstName, _secondName, _dateOfBirth)
+        public Footballer(string _firstName, string _secondName, DateTime _dateOfBirth, string _position, string _team):base(_firstName, _secondName, _dateOfBirth)
         {
-            this._position = _position;
-            this._team = _team;
-            _goals = 0;
+            Position = _position;
+            Team = _team;
+            Goals = 0;
         }
 
-        public void IncrementGoals()
+        public virtual void Score()
         {
-            _goals++;
+            Goals++;
+        }
+
+        public override string ToString()
+        {
+            return $"Postion, team and goals: {Position},{Team},{Goals}";
         }
 
         public override void WriteInfo()
         {
             base.WriteInfo();
-            Console.WriteLine($"Postion, team and goals: {_position},{_team},{_goals}");
+            Console.WriteLine(this);
         }
 
-        public int Goals { get => _goals; set => _goals = value; }
-        public string Team { get => _team; set => _team = value; }
-        public string Position { get => _position; set => _position = value; }
+        public int Goals { get; set; }
+        public string Team { get; set; }
+        public string Position { get; set; }
     }
 }

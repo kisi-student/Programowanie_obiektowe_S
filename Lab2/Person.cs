@@ -1,38 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab2
 {
     public class Person
     {
-        protected string _firstName;
-        protected string _secondName;
-        protected string _dateOfBirth;
+        protected string FirstName { get; set; }
+        protected string SecondName { get; set; }
+        protected DateTime DateOfBirth { get; set; }
 
         public Person()
         {
-            _firstName = "unknown";
-            _secondName = "unknown";
-            _dateOfBirth = "unknown";
+            FirstName = "unknown";
+            SecondName = "unknown";
+            DateOfBirth = new DateTime();
         }
 
-        public Person(string _firstName, string _secondName, string _dateOfBirth)
+        public Person(string _firstName, string _secondName, DateTime _dateOfBirth)
         {
-            this._firstName = _firstName;
-            this._secondName = _secondName;
-            this._dateOfBirth = _dateOfBirth;
+            FirstName = _firstName;
+            SecondName = _secondName;
+            DateOfBirth = _dateOfBirth;
         }
-
         public virtual void WriteInfo()
         {
-            Console.WriteLine($"Name and date: { _firstName} { _secondName} {_dateOfBirth} ");
+            Console.WriteLine(this);
         }
 
-        public string FirstName { get => _firstName; set => _firstName = value; }
-        public string SecondName { get => _secondName; set => _secondName = value; }
-        public string DateOfBirth { get => _dateOfBirth; set => _dateOfBirth = value; }
+        public override string ToString()
+        {
+            return $"FirstName:{FirstName} SecondName:{SecondName} Date of birth:{DateOfBirth.ToShortDateString()}\n";
+        }
     }
 }

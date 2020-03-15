@@ -8,28 +8,24 @@ namespace Lab2
 {
     public class Student:Person
     {
-        private int _year;
-        private int _group;
-        private int _indexNumber;
         private IList<Grade> _grades = new List<Grade>();
-
         public Student() : base()
         {
-            _year = 0;
-            _group = 0;
-            _indexNumber = 0;
+            Year = 0;
+            Group = 0;
+            IndexNumber = 0;
         }
 
-        public Student(string _firstName, string _secondName, string _dateOfBirth, int _year, int _group, int _indexNumber) : base(_firstName, _secondName, _dateOfBirth)
+        public Student(string _firstName, string _secondName, DateTime _dateOfBirth, int _year, int _group, int _indexNumber) : base(_firstName, _secondName, _dateOfBirth)
         {
-            this._year = _year;
-            this._group = _group;
-            this._indexNumber = _indexNumber;
+            Year = _year;
+            Group = _group;
+            IndexNumber = _indexNumber;
         }
 
-        public void AddGrade(string _subject, string _data, double _value)
+        public void AddGrade(string _subject, DateTime _date, double _value)
         {
-            Grade grade = new Grade(_subject, _data, _value);
+            Grade grade = new Grade(_subject, _date, _value);
             _grades.Add(grade);
         }
 
@@ -57,20 +53,54 @@ namespace Lab2
             }
         }
 
-        public void DeleteGrade()
+        public void DeleteGrade(string subject, DateTime date, double value)
         {
-            _grades.re
+            Grade grade = new Grade();
+            foreach (var item in _grades)
+            {
+                if (item.Subject == subject && item.Value == value && item.Date.Date == date.Date)
+                {
+                    grade = item;
+                }
+            }
+                _grades.Remove(grade);
         }
+
+        public void DeleteGrades()
+        {
+            _grades.Clear();
+        }
+
+        public void DeleteGrades(string _subject)
+        {
+            foreach (var grade in _grades.ToList())
+            {
+                if (grade.Subject == _subject)
+                {
+                    _grades.Remove(grade);
+                }
+            }
+        }
+
 
         public override void WriteInfo()
         {
-            base.WriteInfo();
-            Console.WriteLine($"Year, group and index: {_year} {_group} {_indexNumber}");
+            Console.WriteLine(this);
+            foreach (var grade in _grades)
+            {
+                grade.WriteInfo();
+            }
+            Console.WriteLine();
         }
 
-        public int IndexNumber { get => _indexNumber; set => _indexNumber = value; }
-        public int Group { get => _group; set => _group = value; }
-        public int Year { get => _year; set => _year = value; }
-        public IList<Grade> Grades { get => _grades; set => _grades = value; }
+        public override string ToString()
+        {
+            return $"{base.ToString()}Year: {Year} Group: {Group} IndexNumber: {IndexNumber}";
+        }
+
+        public int IndexNumber { get; set; }
+        public int Group { get; set; }
+        public int Year { get; set; }
+
     }
 }
