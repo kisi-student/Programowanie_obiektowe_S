@@ -8,32 +8,20 @@ namespace lab2
 {
     public class Person
     {
-        protected string firstname, lastname, birthday;
+        protected string Firstname { get; set; }
+        protected string Lastname { get; set; }
+        protected string Birthday { get; set; }
 
         public Person(string _firstname, string _lastname, string _birthday)
         {
-            firstname = _firstname;
-            lastname = _lastname;
-            birthday = _birthday;
+            Firstname = _firstname;
+            Lastname = _lastname;
+            Birthday = _birthday;
         }
-        public string Firstname
-        {
-            get { return firstname; }
-            set { firstname = value; }
-        }
-        public string Lastname
-        {
-            get { return lastname; }
-            set { lastname = value; }
-        }
-        public string Birthday
-        {
-            get { return birthday; }
-            set { birthday = value; }
-        }
+       
         public override string ToString()
         {
-            return $"\nFirstname: {firstname}\nLastname: {lastname}\nDate of birth: {birthday}\n";
+            return $"\nFirstname: {Firstname}\nLastname: {Lastname}\nDate of birth: {Birthday}\n";
         }
         public virtual void WriteInfo()
         {

@@ -31,6 +31,30 @@ namespace lab2
             o3.WriteInfo();
             p.WriteInfo();
 
+            ((Student)o2).AddGrade("PO", "2011, 02, 20", 5.0);
+            ((Student)o2).AddGrade("Bazy Danych", "2011, 02, 13", 4.0);
+
+            o2.WriteInfo();
+
+            s.AddGrade("Bazy danych", "2011, 05, 11", 5.0);
+            s.AddGrade("AWWW", "2011, 05, 11", 5.0);
+            s.AddGrade("AWWW","2011, 04, 02", 4.5);
+
+            s.WriteInfo();
+
+            s.RemoveGrade("AWWW", "2011, 04, 02", 4.5);
+
+            s.WriteInfo();
+
+            s.RemoveGrades("AWWW");
+
+            s.WriteInfo();
+
+            s.RemoveGrades();
+            s.WriteInfo();
+
+
+            Console.WriteLine("chyba dziala");
             Console.ReadKey();
 
         }

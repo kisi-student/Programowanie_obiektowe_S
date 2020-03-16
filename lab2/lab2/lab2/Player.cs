@@ -8,28 +8,28 @@ namespace lab2
 {
     public class Player : Person
     {
-        private string position { get; set; }
-        private string club { get; set; }
-        private int numberOfGoals { get; set; }
+        private string Position { get; set; }
+        private string Club { get; set; }
+        private int NumberOfGoals { get; set; }
 
         public Player(string _firstname, string _lastname, string _birthday, string _position, string _club) : base(_firstname, _lastname, _birthday)
         {
-            position = _position;
-            club = _club;
+            Position = _position;
+            Club = _club;
             
         }
 
         public override string ToString()
         {
-            return base.ToString()+ $"\nPosition: {position}\nClub: {club}\nNumber of goals: {numberOfGoals}\n";
+            return base.ToString()+ $"\nPosition: {Position}\nClub: {Club}\nNumber of goals: {NumberOfGoals}\n";
         }
         public override void WriteInfo()
         {
             Console.WriteLine(this);
         }
-        public void ScoreAGoal()
+        public virtual void ScoreAGoal()
         {
-            numberOfGoals++;
+            NumberOfGoals++;
         }
     }
 }

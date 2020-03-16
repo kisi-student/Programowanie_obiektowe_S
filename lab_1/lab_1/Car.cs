@@ -8,27 +8,30 @@ namespace lab_1
 {
     class Car
     {
-        private string brand, model;
+        private string brand, model, registration_number;
         private int number_of_doors, engine_capacity;
         private double average_fuel_consumption;
         private static int number_of_cars = 0;
+        
 
         public Car ()
         {
             brand = "unknown";
             model = "unknown";
+            registration_number = "unknown";
             number_of_doors = 0;
             engine_capacity = 0;
             average_fuel_consumption = 0.0;
             number_of_cars++;
         }
-        public Car (string _brand, string _model, int _number_of_doors, int _engine_capacity, double _average_fuel_consumption)
+        public Car (string _brand, string _model, int _number_of_doors, int _engine_capacity, double _average_fuel_consumption, string _registration_number)
         {
             brand = _brand;
             model = _model;
             number_of_doors = _number_of_doors;
             engine_capacity = _engine_capacity;
             average_fuel_consumption = _average_fuel_consumption;
+            registration_number = _registration_number;
             number_of_cars++;
         }
         public string Brand
@@ -55,6 +58,11 @@ namespace lab_1
         {
             get { return average_fuel_consumption; }
             set { average_fuel_consumption = value; }
+        }
+        public string Registration_number
+        {
+            get { return registration_number; }
+            set { registration_number = value; }
         }
         private double Calculate_sc (double route_length)
         {
