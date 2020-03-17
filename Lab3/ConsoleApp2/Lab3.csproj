@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{452FBD6B-F7BE-46AD-BA5B-996A10D1D56B}</ProjectGuid>
+    <ProjectGuid>{F7CC7A94-BF75-43C2-B859-FD88BD54A164}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lab2</RootNamespace>
-    <AssemblyName>Lab2</AssemblyName>
+    <RootNamespace>ConsoleApp2</RootNamespace>
+    <AssemblyName>ConsoleApp2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Footballer.cs" />
-    <Compile Include="FootballP.cs" />
-    <Compile Include="Grade.cs" />
-    <Compile Include="HandFootballer.cs" />
+    <Compile Include="Author.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="Catalog.cs" />
+    <Compile Include="ILibrariansManagment.cs" />
+    <Compile Include="IPositionManagment.cs" />
+    <Compile Include="Journal.cs" />
+    <Compile Include="Librarian.cs" />
+    <Compile Include="Library.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
