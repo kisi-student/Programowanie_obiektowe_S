@@ -25,7 +25,7 @@ namespace Lab2
 
         public override string ToString()
         {
-            return base.ToString() + $"\r\nGrade Data | Subject Name: {subjectName}, Date: {date}, Grade: {note}";
+           return $"\r\nGrade Data | Subject Name: {subjectName}, Date: {date}, Grade: {note}";
         }
 
         public void Details()
