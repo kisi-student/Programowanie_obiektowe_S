@@ -14,7 +14,12 @@ namespace lab3
         public int PublicationDate { get; set; }
 
         public Position()
-        { }
+        {
+            Title = "unknown";
+            Id = 0;
+            Publishing = "unknown";
+            PublicationDate = 0;
+        }
         public Position(string _title, int _id, string _publishing, int _publicationDate)
         {
             Title = _title;
@@ -23,6 +28,8 @@ namespace lab3
             PublicationDate = _publicationDate;
         }
         public abstract void WriteInfo();
+
+        
         
     }
 }

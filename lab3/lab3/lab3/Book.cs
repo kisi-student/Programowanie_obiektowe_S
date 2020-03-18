@@ -9,19 +9,30 @@ namespace lab3
     class Book : Position
     {
         public int Pages { get; set; }
-        public Book()
+        private List<Author> author = new List<Author>();
+        
+        public Book() : base()
         { }
         public Book(string _title, int _id, string _publishing, int _publicationDate, int _pages) : base(_title, _id, _publishing, _publicationDate)
         {
             Pages = _pages;
         }
-        public void AddAuthor(Author author)
+        
+        public override string ToString()
         {
-
+            return $"Tittle:  {Title}\nId: {Id}\nPublishing: {Publishing}\nPublication Date: {PublicationDate}\nPages: {Pages}";
         }
         public override void WriteInfo()
         {
-            Console.WriteLine("Tittle:  {0}\nId: {1}\nPublishing: {2}\nPublication Date: {3}\nPages: {4}", Title, Id, Publishing, PublicationDate, Pages);
+            Console.WriteLine(this);
+        }
+        public void AddAuthor(Author _author)
+        {
+            author.Add(_author);
+        }
+        public void dopka()
+        {
+            Console.WriteLine(Title);
         }
     }
 }

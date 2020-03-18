@@ -15,9 +15,13 @@ namespace lab3
         {
             Number = _number;
         }
+        public override string ToString()
+        {
+            return $"Tittle:  {Title}\nId: {Id}\nPublishing: {Publishing}\nPublication Date: {PublicationDate}\nNumber: {Number}";
+        }
         public override void WriteInfo()
         {
-
+            Console.WriteLine(this);
         }
     }
 }
