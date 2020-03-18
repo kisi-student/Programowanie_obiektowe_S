@@ -16,11 +16,25 @@ namespace Lab2
         {
         }
 
-        public Player(string name, string surname, string birthday, string position, string club, int goals) : base(name, surname, birthday)
+        public Player(string name, string surname, string birthday, string position, string club) : base(name, surname, birthday)
         {
             this.position = position;
             this.club = club;
-            this.goals = goals;
+        }
+
+        public virtual void ShootGoal()
+        {
+            goals++;
+        }
+
+        public override void Details()
+        {
+            Console.WriteLine(this);
+        }
+
+        public override string ToString()
+        {
+            return base.ToString()+$", pozycja:{position}, klub:{club}, goli:{goals}";
         }
     }
 }
