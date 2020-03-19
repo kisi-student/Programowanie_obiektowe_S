@@ -8,5 +8,15 @@ namespace lab3
 {
     class Person
     {
+        protected string Firstname { get; set; }
+        protected string Lastname { get; set; }
+
+        public Person()
+        { }
+        public Person(string _firstname, string _lastname)
+        {
+            Firstname = _firstname;
+            Lastname = _lastname;
+        }
     }
 }

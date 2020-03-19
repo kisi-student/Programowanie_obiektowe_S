@@ -8,5 +8,9 @@ namespace lab3
 {
     class IPositionManagment
     {
+        public void FindByTitle()
+        { }
+        public void FindById()
+        { }
     }
 }

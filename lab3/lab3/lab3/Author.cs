@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    public class Author
+    class Author : Person
     {
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
+        
+        public string Nationality { get; set; }
         public Author()
         { }
-        public Author(string _firstname, string _lastname)
+        public Author(string _firstname, string _lastname, string _nationality) : base (_firstname, _lastname)
         {
-            Firstname = _firstname;
-            Lastname = _lastname;
+            Nationality = _nationality;
         }
     }
 }

@@ -30,9 +30,6 @@ namespace lab3
         {
             author.Add(_author);
         }
-        public void dopka()
-        {
-            Console.WriteLine(Title);
-        }
+       
     }
 }

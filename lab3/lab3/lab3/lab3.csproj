@@ -46,7 +46,11 @@
     <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Catalog.cs" />
+    <Compile Include="IPositionManagment.cs" />
+    <Compile Include="Librarian.cs" />
+    <Compile Include="Library.cs" />
     <Compile Include="Magazine.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
