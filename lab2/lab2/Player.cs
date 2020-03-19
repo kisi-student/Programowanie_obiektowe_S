@@ -30,7 +30,7 @@ namespace lab2
             Console.WriteLine(this);
         }
 
-        public void ScoreGoal()
+        public virtual void ScoreGoal()
         {
             GoalCount++;
         }
