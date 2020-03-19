@@ -5,39 +5,35 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lab1
-{
-
+{    
     class Program
     {
         static void Main(string[] args)
         {
 
+            Car car1 = new Car();
 
-            public class Car
-        {
-            private string brand;
-            private string model;
-            private int doorCount;
-            private float engineVolume;
-            private float avgConsump; // averageFuelConsumption
-                                      //private string registrationNumber;
+            car1.Details();
 
+            car1.Brand = "Fiat";
+            car1.Model = "126p";
+            car1.DoorCount = 2;
+            car1.EngineVolume = 650;
+            car1.AvgConsump = 6.0;
 
+            car1.Details();
 
+            Car car2 = new Car("Syrena", "105", 2, 800, 7.6);
 
-            /*
-            public Car() // konstryktor domyslny
-                {
-                    _avgConsump = 0.0;
-                    _carCount++;
-                }
-            */
-        }
-    }
-        
+            car2.Details();
 
-        // Car car1 = new Car();
-        // car1.Details();
+            double cost = car2.CalculateCost(30.5, 4.85);
+            Console.WriteLine("Cost of travel: " + cost);
+
+            Car.DisplayCarCount();
+
+            Console.ReadKey();
+        } 
     }
 }
 
