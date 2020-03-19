@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    class Author : Person
+    public class Author : Person
     {
         
         public string Nationality { get; set; }
@@ -15,6 +15,12 @@ namespace lab3
         public Author(string _firstname, string _lastname, string _nationality) : base (_firstname, _lastname)
         {
             Nationality = _nationality;
+        }
+  
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Nationality: {Nationality}\n";
         }
     }
 }

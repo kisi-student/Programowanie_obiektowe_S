@@ -21,16 +21,16 @@ namespace lab3
         }
         public void AddLibrarian(Librarian librarian)
         {
-            if (librarian != null)
-                Librarians.Add(librarian);
+            Librarians.Add(librarian);
         }
         public void WriteLibrarians()
         {
-            string str = "Liblarians: \n";
-            for (int i =0; i<Librarians.Count; i++)
+            var str = "Librarians:\n";
+            foreach (var item in Librarians)
             {
-                str += Librarians + "\n";
+                str += item + "\n";
             }
+            Console.WriteLine(str);
         }
         public void AddCatalog(Catalog catalog)
         {
@@ -38,11 +38,73 @@ namespace lab3
         }
         public void AddPosition(Position p, string thematicDepartment)
         {
-            
+            var catalog = new Catalog
+            {
+                ThematicDepartment = thematicDepartment
+            };
+            if (catalog.position != null)
+            {
+                catalog.position.Add(p);
+            }
         }
-        public void FindPositionById()
+        public Position FindPositionById(int _id)
         {
+            
+            foreach (var catalog in Catalogs)
+            {
+                foreach (var Position in catalog.position)
+                {
+                    if (Position.Id == _id)
+                    {
+                        return Position;
+                    }
+                }
+            }
+            return null;
+        }
+        public Position FindPositionByTitle(string _title)
+        {
+            foreach (var catalog in Catalogs)
+            {
+                foreach (var Position in catalog.position)
+                {
+                    if (Position.Title == _title)
+                    {
+                        return Position;
+                    }
+                }
+            }
+            return null;
+        }
+        public override string ToString()
+        {
+            
+            var str = $"Library address: {Address}\nLibrarians:\n";
+            for(int i=0; i<Librarians.Count; i++)
+            {
 
+                Librarian l = Librarians[i];
+                str +=  l + "\n";
+            
+            }
+            var str1= "Catalogs:\n";
+            Console.WriteLine(Catalogs[0]);
+            for(int i=0; i<Catalogs.Count; i++)
+            {
+                Catalog c = Catalogs[i];
+                str1 +=  c + "\n";
+            }
+            var str3 = str+str1 ;
+            return str3;
+        }
+
+        public void WriteAllPositions()
+        {
+            for(int i=0; i<Catalogs.Count;i++)
+            {
+                Catalog c = Catalogs[i];
+                Console.WriteLine(c);
+            }
         }
 
     }

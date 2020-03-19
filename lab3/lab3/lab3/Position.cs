@@ -6,26 +6,30 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    abstract class Position 
+    public abstract class Position 
     {
         public string Title { get; set; }
         public int Id { get; set; }
-        public string Publishing { get; set; }
+        public string Publisher { get; set; }
         public int PublicationDate { get; set; }
 
         public Position()
         {
             Title = "unknown";
             Id = 0;
-            Publishing = "unknown";
+            Publisher = "unknown";
             PublicationDate = 0;
         }
-        public Position(string _title, int _id, string _publishing, int _publicationDate)
+        public Position(string _title, int _id, string _publisher, int _publicationDate)
         {
             Title = _title;
             Id = _id;
-            Publishing = _publishing;
+            Publisher = _publisher;
             PublicationDate = _publicationDate;
+        }
+        public override string ToString()
+        {
+            return $"ID:{Id}\nTitle:{Title}\nPublisher:{Publisher}\nPublication Date:{PublicationDate}\n";
         }
         public abstract void WriteInfo();
 

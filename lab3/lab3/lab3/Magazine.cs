@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    class Magazine : Position
+    public class Magazine : Position
     {
         public int Number { get; set; }
         public Magazine()
@@ -17,7 +17,7 @@ namespace lab3
         }
         public override string ToString()
         {
-            return $"Tittle:  {Title}\nId: {Id}\nPublishing: {Publishing}\nPublication Date: {PublicationDate}\nNumber: {Number}";
+            return base.ToString() + $"Journal number:{Number}\n";
         }
         public override void WriteInfo()
         {

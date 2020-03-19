@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-     class Catalog
+     public class Catalog : IPositionManagment
     {
         public string ThematicDepartment { get; set; }
         public IList<Position> position = new List<Position>();
         public Catalog()
-        { }    
-        
+        { }
+        public Catalog(IList<Position> pos)
+        {
+            position = pos;
+            ThematicDepartment = "NONE";
+        }
         public Catalog(string _thematicDepartment, IList<Position> _position)
         {
             ThematicDepartment = _thematicDepartment;
@@ -40,12 +44,12 @@ namespace lab3
             }
             return null;
             }
-        public Position FindPositionByPublishing(string publishing)
+        public Position FindPositionByPublishing(string publisher)
         {
             for(int i=0; i<position.Count; i++)
             {
                 Position p = position[i];
-                if (publishing == p.Publishing)
+                if (publisher == p.Publisher)
                     return p;
             }
             return null;
@@ -66,11 +70,18 @@ namespace lab3
             for (int i=0; i<position.Count; i++)
             {
                 Position p = position[i];
-                str += p.Publishing + " " + p.Title + "\n";
+                str += p.Publisher + " " + p.Title + "\n";
             }
             Console.WriteLine(str);
         }
-
+        public override string ToString()
+        {
+            var str = "CATALOG: \n";
+            str += $"Topic sectiont:{ThematicDepartment} \nPositions: \n";
+            foreach (var item in position)
+                str += item + "\n";
+            return str;
+        }
         public void AddPosition(Position _position)
         {
             position.Add(_position);

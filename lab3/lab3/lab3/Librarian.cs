@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    class Librarian : Person
+    public class Librarian : Person
     {
         public string DateOfEmployment { get; set; }
         public int Salary { get; set; }
@@ -17,6 +17,10 @@ namespace lab3
         {
             DateOfEmployment = _dateOfEmployment;
             Salary = _salary;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $"Salary: {Salary} \nEmploymentDate: {DateOfEmployment}\n";
         }
     }
 }

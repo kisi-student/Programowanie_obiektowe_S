@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    class Book : Position
+    public class Book : Position
     {
         public int Pages { get; set; }
         private List<Author> author = new List<Author>();
@@ -20,7 +20,12 @@ namespace lab3
         
         public override string ToString()
         {
-            return $"Tittle:  {Title}\nId: {Id}\nPublishing: {Publishing}\nPublication Date: {PublicationDate}\nPages: {Pages}";
+            string str = base.ToString() + $"Page numbers: {Pages} \nAuthors: \n";
+            foreach (var item in author)
+            {
+                str += item + "\n";
+            }
+            return str;
         }
         public override void WriteInfo()
         {

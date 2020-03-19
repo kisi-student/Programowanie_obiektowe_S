@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    class IPositionManagment
+    public interface IPositionManagment
     {
-        public void FindByTitle()
-        { }
-        public void FindById()
-        { }
+        Position FindPositionByTitle(string _title);
+
+        Position FindPositionById(int _id);
+        void WriteAllPositions();
+
     }
 }
