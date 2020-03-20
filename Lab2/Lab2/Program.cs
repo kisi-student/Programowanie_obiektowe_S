@@ -6,9 +6,9 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
-            Task1.DoWork();
+            //Task1.DoWork();
             Task2.DoWork();
-            Homework.DoWork();
+            //Homework.DoWork();
         }
     }
 }
