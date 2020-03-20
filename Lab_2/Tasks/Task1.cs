@@ -11,21 +11,21 @@ namespace Tasks
     {
         public static void Return()
         {
-            Person o = new Person("Adam", "Mis", "20.03.1980");
-            Person o2 = new Student("Michal", "Kot", "13.04.1990",2,1,12345);
-            Person o3 = new Footballer("Mateusz", "Zbik", "10.08.1986","Center Back","FC Czestochowa");
+            Person o = new Person("Adam", "Mis", new DateTime (1980,03,20));
+            Person o2 = new Student("Michal", "Kot",new DateTime(1990,04,13),2,1,12345);
+            Person o3 = new Player("Mateusz", "Zbik",new DateTime(1986,08,10),"Center Back","FC Czestochowa");
 
             o.PrintInfo();
             o2.PrintInfo();
             o3.PrintInfo();
 
-            Student s = new Student("Krzysztof", "Jez", "22.12.1990", 2, 5, 54321);
-            Footballer p = new Footballer("Piotr", "Kos", "14.09.1984", "Striker", "FC Politechnika ");
+            Student s = new Student("Krzysztof", "Jez",new DateTime(1990,12,22), 2, 5, 54321);
+            Player p = new Player("Piotr", "Kos",new DateTime(1984,09,14), "Striker", "FC Politechnika ");
 
             s.PrintInfo();
             p.PrintInfo();
 
-            ((Footballer)o3).Shoot();
+            ((Player)o3).Shoot();
             p.Shoot();
             p.Shoot();
 

@@ -9,10 +9,10 @@ namespace Lab_2
     public class Mark
     {
         public string Lecture { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public double Value { get; set; }
 
-        public Mark(string lecture,string date,double value)
+        public Mark(string lecture,DateTime date,double value)
         {
             Lecture = lecture;
             Date = date;

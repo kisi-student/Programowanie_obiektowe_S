@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Footballer.cs" />
+    <Compile Include="FootBaller.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="HandBaller.cs" />
     <Compile Include="Mark.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -51,6 +53,7 @@
     <Compile Include="Student.cs" />
     <Compile Include="Tasks\Task1.cs" />
     <Compile Include="Tasks\Task2.cs" />
+    <Compile Include="Tasks\Task3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

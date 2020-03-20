@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lab_2
 {
-    public class FootBaller: Player
+    public class HandBaller: Player
     {
-        public FootBaller(string name,string surname,DateTime birthday,string postion,string club):
-            base(name,surname,birthday,postion,club)
+        public HandBaller(string name,string surname, DateTime birthday,string position,string club):
+            base(name,surname,birthday,position,club)
         {
 
         }
@@ -17,7 +17,8 @@ namespace Lab_2
         public override void Shoot()
         {
             base.Shoot();
-            Console.WriteLine("Footballer shoot a goal !!!");
+            Console.WriteLine("Handballer shoot a goal !!!");
         }
+
     }
 }

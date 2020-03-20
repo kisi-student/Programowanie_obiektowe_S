@@ -10,9 +10,9 @@ namespace Lab_2
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public string Birthday { get; set; }
+        protected DateTime Birthday { get; set; }
 
-        public Person(string name,string surname,string birthday)
+        public Person(string name,string surname,DateTime birthday)
         {
             Name = name;
             Surname = surname;
