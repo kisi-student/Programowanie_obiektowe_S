@@ -10,7 +10,7 @@ namespace Lab3
         {
             try
             {
-                //Task1.DoWork();
+                Task1.DoWork();
                 Task2.DoWork();
             }
             catch(Exception ex)
