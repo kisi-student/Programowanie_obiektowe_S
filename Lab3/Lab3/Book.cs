@@ -30,9 +30,9 @@ namespace Lab3
             return base.ToString() + $"\r\nBook Details | Number of Pages: {numberOfPages}";
         }
 
-        public void AddAuthor(string name_, string surname_)
+        public void AddAuthor(string name_, string surname_, string nationality_)
         {
-            author.Add(new Author(name_, surname_));
+            author.Add(new Author(name_, surname_, nationality_));
         }
 
         public override void Details()

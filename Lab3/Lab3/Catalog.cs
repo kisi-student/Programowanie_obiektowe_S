@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    class Catalog
+    class Catalog : IItemManagement
     {
         private string theme;
         private List<Item> item = new List<Item>();
 
         public string Theme { get => theme; set => theme = value; }
+        internal List<Item> Item { get => item; set => item = value; }
 
         public Catalog()
         {
@@ -35,33 +36,41 @@ namespace Lab3
 
         public void FindItemByPhrase(string phrase)
         {
+           
             foreach (Item i in item)
             {
                 if (phrase == i.Title | phrase == i.PublishingHouse)
                 {
                     i.Details();
-                   
+                    
                 }
-                else
-                {
-                    return;
-                }
-            }          
+            }
+            //Console.WriteLine("\r\n");
         }
 
         public void FindItemByNumber(int number)
         {
+            
             foreach (Item i in item)
             {
                 if (number == i.Id | number == i.ReleaseYear)
                 {
                     i.Details();
+                    
+                }
+            }
+            //Console.WriteLine("\r\n");
+        }
 
-                }
-                else
-                {
-                    return;
-                }
+        public void ShowAll()
+        {
+            int j = 1;
+            foreach (Item i in item)
+            {
+                //Console.WriteLine(i); //tak nie robić bo wyświetla to co zwraca To String tylko
+                Console.WriteLine("Item nr: " + j);
+                j++;
+                i.Details();
             }
         }
 
