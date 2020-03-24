@@ -8,7 +8,8 @@ namespace Lab4
     {
         static void Main(string[] args)
         {
-            Task1.DoWork();
+            //Task1.DoWork();
+            Task2.DoWork();
         }
     }
 }

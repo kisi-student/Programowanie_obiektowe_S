@@ -6,7 +6,7 @@ namespace Lab4
 {
     class OnewayList<T> : IMyList<T>
     {
-        private class Node
+        protected class Node
         {
             public T Value { get; set; }
             public Node Next { get; set; }
@@ -14,8 +14,8 @@ namespace Lab4
 
         public uint Count { get; private set; }
 
-        private Node _first = null;
-        private Node _last = null;
+        protected Node _first = null;
+        protected Node _last = null;
 
         public void Add(T element)
         {

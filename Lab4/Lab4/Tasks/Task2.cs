@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lab4.Tasks
 {
-    class Task1
+    class Task2
     {
         public static void DoWork()
         {
-            Console.WriteLine("ZADANIE 1\n");
+            Console.WriteLine("ZADANIE 2\n");
 
-            var people = new OnewayList<Person>();
+            var people = new TwoWayList<Person>();
 
             people.Add(new Person("Jan", "Kowalski", 12));
             people.Add(new Person("Ala", "Nowak", 32));
@@ -23,10 +23,10 @@ namespace Lab4.Tasks
             Console.WriteLine($"Unchanged list of people: ");
             PrintPeople(people);
 
-            Console.WriteLine($"Adults: ");
-            for (uint i = 0; i < people.Count; i++)
+            Console.WriteLine($"Adults displayed in reversed order: ");
+            for (uint i = people.Count - 1; i > 0 ; i--)
             {
-                if(people[i].Age >= 18)
+                if (people[i].Age >= 18)
                     Console.WriteLine(people[i].ToString());
             }
 
@@ -80,11 +80,11 @@ namespace Lab4.Tasks
             Console.Clear();
         }
 
-        private static void PrintPeople(OnewayList<Person> people)
+        private static void PrintPeople(TwoWayList<Person> people)
         {
-            for (uint i = 0; i < people.Count; i++)
+            foreach (var person in people)
             {
-                Console.WriteLine(people[i].ToString());
+                Console.WriteLine(person.ToString());
             }
             Console.WriteLine();
         }
