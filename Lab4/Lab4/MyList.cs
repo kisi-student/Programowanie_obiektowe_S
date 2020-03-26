@@ -4,9 +4,9 @@ using Lab4.Interfaces;
 
 namespace Lab4
 {
-    class OnewayList<T> : IMyList<T>
+    public partial class MyList<T> : IMyList<T>
     {
-        protected class Node
+        class Node
         {
             public T Value { get; set; }
             public Node Next { get; set; }
@@ -14,8 +14,8 @@ namespace Lab4
 
         public uint Count { get; private set; }
 
-        protected Node _first = null;
-        protected Node _last = null;
+        private Node _first = null;
+        private Node _last = null;
 
         public void Add(T element)
         {
@@ -46,7 +46,7 @@ namespace Lab4
 
         public void Remove(T element)
         {
-            Node e = _first;
+            Node e = _first; 
 
             if (e.Equals(element))
             {

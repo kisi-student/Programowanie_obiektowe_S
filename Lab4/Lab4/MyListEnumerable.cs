@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    class TwoWayList<T> : OnewayList<T>, IEnumerable<T>
+    public partial class MyList<T> : IEnumerable<T>
     {
-        private class MyEnumerator : IEnumerator<T>
+        class MyEnumerator : IEnumerator<T>
         {
             Node first, current;
 

@@ -12,7 +12,7 @@ namespace Lab4.Tasks
         {
             Console.WriteLine("ZADANIE 1\n");
 
-            var people = new OnewayList<Person>();
+            var people = new MyList<Person>();
 
             people.Add(new Person("Jan", "Kowalski", 12));
             people.Add(new Person("Ala", "Nowak", 32));
@@ -80,7 +80,7 @@ namespace Lab4.Tasks
             Console.Clear();
         }
 
-        private static void PrintPeople(OnewayList<Person> people)
+        private static void PrintPeople(MyList<Person> people)
         {
             for (uint i = 0; i < people.Count; i++)
             {
