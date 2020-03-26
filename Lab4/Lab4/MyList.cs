@@ -11,7 +11,7 @@ namespace Lab4
             public T Value { get; set; }
             public Node Next { get; set; }
         }
-
+        
         public uint Count { get; private set; }
 
         private Node _first = null;
@@ -25,7 +25,11 @@ namespace Lab4
             }
             else
             {
-                _last = _last.Next = new Node() { Value = element };
+                // w tym momencie _last to jest 1
+                _last.Next = new Node() { Value = element };
+                
+                // w tym momencie ustawiamy _last na 15
+                _last = _last.Next; 
             }
             Count++;
         }
@@ -33,9 +37,10 @@ namespace Lab4
         private Node Get(uint index)
         {
             var element = _first;
-            while (index-- > 0 && element != null)
+            while (index > 0 && element != null)
             {
                 element = element.Next;
+                index--;
             }
             if(element == null)
             {
@@ -48,36 +53,46 @@ namespace Lab4
         {
             Node e = _first; 
 
-            if (e.Equals(element))
+            if(e != null)
             {
-                _first = e.Next;
-            }
-
-            uint i = 1;
-            while(i < Count && e != null)
-            {
-                e = Get(i);
                 if (e.Value.Equals(element))
                 {
-                    if (i == (Count - 1))
-                    {
-                        _last = Get(i - 1);
-                        _last.Next = null;
-                    }
-                    else
-                    {
-                        Get(i - 1).Next = e.Next;
-                    }
-
+                    _first = e.Next;
                     Count--;
-                    break;
+                    return;
                 }
-                i++;
+                
+                uint i = 1;
+                while (i < Count)
+                {
+                    e = Get(i);
+                    if (e.Value.Equals(element))
+                    {
+                        if (i == (Count - 1))
+                        {
+                            _last = Get(i - 1);
+                            _last.Next = null;
+                        }
+                        else
+                        {
+                            Get(i - 1).Next = e.Next;
+                        }
+
+                        Count--;
+                        break;
+                    }
+                    i++;
+                }
             }
         }
 
         public void RemoveAt(uint index)
         {
+            if(index >= Count)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
             var element = Get(index);
             
             if(index == 0)
@@ -98,8 +113,12 @@ namespace Lab4
 
         public void Insert(uint index, T element)
         {
-            var e = new Node();
-            e.Value = element;
+            if (index >= Count)
+            {
+                throw new IndexOutOfRangeException();
+            }
+
+            var e = new Node() { Value = element };
 
             if(index == 0)
             {

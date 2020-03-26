@@ -12,7 +12,6 @@ namespace Lab4
         public string Lastname { get; set; }
         public int Age { get; set; }
 
-
         public Person(string firstname, string lastname, int age)
         {
             if(string.IsNullOrWhiteSpace(firstname) || string.IsNullOrWhiteSpace(lastname))
@@ -24,6 +23,7 @@ namespace Lab4
             Age = age;
         }
 
+        
         public override bool Equals(object obj)
         {
             if((obj == null) || !(this.GetType().Equals(obj.GetType())))
