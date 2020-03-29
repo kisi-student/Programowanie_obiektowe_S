@@ -8,7 +8,7 @@ namespace Lab04
 {
     public partial class DoublyLinkedList<T>
     {
-        private class Node
+        protected class Node
         {
             public T element { get; set; }
             public Node next, prev;
@@ -18,9 +18,9 @@ namespace Lab04
             public Node() { next = null; }
         }
 
-        private int size;
-        private Node firstElement = null;
-        private Node lastElement = null;
+        protected int size;
+        protected Node firstElement = null;
+        protected Node lastElement = null;
 
         public int Size { get => size; }
 

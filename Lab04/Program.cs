@@ -93,7 +93,16 @@ namespace Lab04
 
             lDoublyLinked.Remove(objPeople[2]);
 
-            foreach (Person p in lDoublyLinked)
+            Console.WriteLine("-----------------------------------");
+
+            DoublyLinkedListRev<Person> lDoublyLinkedRev = new DoublyLinkedListRev<Person>();
+
+            lDoublyLinkedRev.Add(objPeople[0]);
+            lDoublyLinkedRev.Add(objPeople[1]);
+            lDoublyLinkedRev.Add(objPeople[2]);
+            lDoublyLinkedRev.Add(objPeople[3]);
+
+            foreach (Person p in lDoublyLinkedRev)
                 Console.WriteLine(p);
 
             Console.Read();

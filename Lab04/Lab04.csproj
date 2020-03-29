@@ -44,12 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoublyLinkedList.cs" />
-    <Compile Include="DoublyLinkedListEnumerable.cs" />
+    <Compile Include="DoublyLinkedListEnumerator.cs" />
+    <Compile Include="DoublyLinkedListRev.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="LinkedListEnumerable.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
